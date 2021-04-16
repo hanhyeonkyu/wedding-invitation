@@ -1,0 +1,12 @@
+.wrpper {
+    width: 100%;
+    text-align: center;
+}
+
+.days {
+    opacity: .6;
+}
+
+.time {
+    font-size: 4rem;
+}
