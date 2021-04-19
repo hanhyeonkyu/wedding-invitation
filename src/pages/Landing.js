@@ -1,4 +1,4 @@
-import { Button, IconButton, Modal } from '@material-ui/core';
+import { Button, IconButton, Modal, Snackbar } from '@material-ui/core';
 import { EmailRounded, PhoneRounded } from '@material-ui/icons';
 import CountDown from '../comps/CountDown';
 import { makeStyles } from '@material-ui/core/styles';
@@ -7,6 +7,7 @@ import GridListTile from '@material-ui/core/GridListTile';
 import "./Landing.css"
 import thekwedding from './thekwedding.png';
 import React from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -63,14 +64,21 @@ const tileData = [
 const Landing = () => {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
+    const [sopen, setSopen] = React.useState(false);
     const [isBride, setIsBride] = React.useState(true)
     const handleOpen = (isBride) => {
         setIsBride(isBride)
         setOpen(true);
     };
-
-    const handleClose = () => {
-        setOpen(false);
+    const handleCopy = () => {
+        setSopen(true)
+    }
+    const handleClose = (target) => {
+        if (target === 'modal') {
+            setOpen(false);
+        } else if (target === 'snack') {
+            setSopen(false)
+        }
     };
     return (
         <div className="wrapper">
@@ -151,8 +159,8 @@ const Landing = () => {
                 <div className="gallery-tit">" 행복한 날들 "</div>
                 <div className={classes.gallarygrid}>
                     <GridList cellHeight={160} className={classes.gridList} cols={3}>
-                        {tileData.map((tile) => (
-                            <GridListTile key={tile.img} cols={tile.cols || 1}>
+                        {tileData.map((tile, index) => (
+                            <GridListTile key={index} cols={tile.cols || 1}>
                                 <img src={tile.img} alt={tile.title} />
                             </GridListTile>
                         ))}
@@ -203,7 +211,7 @@ const Landing = () => {
             </section>
             <Modal
                 open={open}
-                onClose={handleClose}
+                onClose={(e) => handleClose("modal")}
             >
                 <div style={{
                     top: `30%`,
@@ -213,17 +221,24 @@ const Landing = () => {
                 }} className={classes.paper}>
                     {isBride ? (
                         <React.Fragment>
-                            <h3>신부에게 마음 보내기</h3>
-                            <p>카카오뱅크<br />3333-15-8460877</p>
+                            <h3>신부(김인혜)에게 마음 보내기</h3>
+                            <CopyToClipboard style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }} text="카카오뱅크 3333-15-8460877" onCopy={handleCopy}><p>카카오뱅크<br />3333-15-8460877</p></CopyToClipboard>
                         </React.Fragment>
                     ) : (
                         <React.Fragment>
-                            <h3>신랑에게 마음 보내기</h3>
-                            <p>카카오뱅크<br />3333-05-7361141</p>
+                            <h3>신랑(한현규)에게 마음 보내기</h3>
+                            <CopyToClipboard style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }} text="카카오뱅크 3333-05-7361141" onCopy={handleCopy}><p>카카오뱅크<br />3333-15-8460877</p></CopyToClipboard>
                         </React.Fragment>
                     )}
                 </div>
             </Modal>
+            <Snackbar
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+                open={sopen}
+                onClose={(e) => handleClose("snack")}
+                message="copied!"
+                key={sopen}
+            />
         </div>
     );
 }
