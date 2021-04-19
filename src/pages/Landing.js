@@ -1,10 +1,13 @@
-import { IconButton } from '@material-ui/core';
+import { Button, IconButton, Modal } from '@material-ui/core';
 import { EmailRounded, PhoneRounded } from '@material-ui/icons';
 import CountDown from '../comps/CountDown';
 import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import "./Landing.css"
+import thekwedding from './thekwedding.png';
+import React from 'react';
+
 
 const useStyles = makeStyles((theme) => ({
     gallarygrid: {
@@ -16,6 +19,14 @@ const useStyles = makeStyles((theme) => ({
     },
     gridList: {
         width: "95vw"
+    },
+    paper: {
+        position: 'absolute',
+        width: '80vw',
+        backgroundColor: theme.palette.background.paper,
+        border: '2px solid #000',
+        boxShadow: theme.shadows[5],
+        padding: theme.spacing(2, 4, 3),
     },
 }));
 
@@ -51,12 +62,22 @@ const tileData = [
 
 const Landing = () => {
     const classes = useStyles();
+    const [open, setOpen] = React.useState(false);
+    const [isBride, setIsBride] = React.useState(true)
+    const handleOpen = (isBride) => {
+        setIsBride(isBride)
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
     return (
         <div className="wrapper">
             <section className="visual-section">
                 <div className="vertical-item-date"><span className="date-string">10</span>月<span className="date-string">24</span>日</div>
                 <div className="vertical-item-photo">
-                    <img src="https://lh3.googleusercontent.com/proxy/cMpOLBNmzRQqUh0gZDnN6J2RqIR5Eak8wKItmxl3R-fbc_bpoLi1tiOCf7n8MBPuJ0Dfzecz2WGcjwqL1JohWcn4a6JKrL_MkwnwWkyCKZ1HanI-OA" alt="main" style={{ width: '85vw' }} />
+                    <img src="http://image.newsis.com/2020/11/01/NISI20201101_0000628102_web.jpg" alt="main" style={{ width: '85vw' }} />
                 </div>
                 <div className="vertical-item-info">
                     <p className="info-major">한현규 ♥️ 김인혜</p>
@@ -163,30 +184,46 @@ const Landing = () => {
                     <div id="map_canvas" className="map">
                         <div style={{ font: "normal normal 400 12px/normal dotum, sans-serif", width: "100%", height: "100%", color: "#333", position: "relative" }}>
                             <div style={{ height: "100%" }}>
-                                {/* <a href="https://map.kakao.com/?urlX=510720.0&amp;urlY=1124069.0&amp;itemId=26497843&amp;q=%EC%84%9C%EC%9A%B8%EC%88%B2A%ED%83%80%EC%9B%8C&amp;srcid=26497843&amp;map_type=TYPE_MAP&amp;from=roughmap" target="_blank">
-                                    <img className="map" src="//t1.daumcdn.net/roughmap/imgmap/e4a136bdc0a737dd8c6a0812eebdb5fa1bfe55660e458c000633c51c83b13def" width="100%" height="100%">
-								</a> */}
+                                <a href="https://map.kakao.com/link/search/더케이웨딩컨벤션수원" target="_blank" rel="noreferrer">
+                                    <img className="map" src={thekwedding} width="100%" height="100%" alt="thekweddingconvention_roadmap" />
+                                </a >
                             </div>
                         </div>
                     </div>
-                    {/* <div className="link">
-                        <ul>
-                            <li>
-                                <a href="javascript:pcAlert();" className="tmap">티맵</a>
-                            </li>
-                            <li>
-                                <a href="javascript:pcAlert();" className="kakaonavi">카카오내비</a>
-                            </li>
-                            <li>
-                                <a href="javascript:pcAlert();" className="navermap">네이버지도</a>
-                            </li>
-                            <li>
-                                <a href="javascript:pcAlert();" className="kakaomap">카카오맵</a>
-                            </li>
-                        </ul>
-                    </div> */}
                 </div>
             </section>
+            <div className="section-divider" />
+            <section className="money-section">
+                <div style={{ marginBottom: '1rem' }}>
+                    신랑측 마음 <Button onClick={(e) => handleOpen(false)} style={{ borderRadius: "1rem", marginLeft: '1rem' }} size="large" variant="contained" color="primary">계좌번호 보기</Button>
+                </div>
+                <div style={{ marginBottom: '1rem' }}>
+                    신부측 마음 <Button onClick={(e) => handleOpen(true)} style={{ borderRadius: "1rem", marginLeft: '1rem' }} size="large" variant="contained" color="secondary">계좌번호 보기</Button>
+                </div>
+            </section>
+            <Modal
+                open={open}
+                onClose={handleClose}
+            >
+                <div style={{
+                    top: `30%`,
+                    left: `30%`,
+                    transform: `translate(-30%, -30%)`,
+                    textAlign: 'left'
+                }} className={classes.paper}>
+                    {isBride ? (
+                        <React.Fragment>
+                            <h3>신부에게 마음 보내기</h3>
+                            <p>카카오뱅크<br />3333-15-8460877</p>
+                        </React.Fragment>
+                    ) : (
+                        <React.Fragment>
+                            <h3>신랑에게 마음 보내기</h3>
+                            <p>카카오뱅크<br />3333-05-7361141</p>
+                        </React.Fragment>
+                    )}
+                </div>
+            </Modal>
         </div>
     );
 }
