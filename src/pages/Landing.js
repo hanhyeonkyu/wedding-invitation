@@ -192,9 +192,11 @@ const Landing = () => {
                     <div id="map_canvas" className="map">
                         <div style={{ font: "normal normal 400 12px/normal dotum, sans-serif", width: "100%", height: "100%", color: "#333", position: "relative" }}>
                             <div style={{ height: "100%" }}>
-                                <a href="https://map.kakao.com/link/search/더케이웨딩컨벤션수원" target="_blank" rel="noreferrer">
-                                    <img className="map" src={thekwedding} width="100%" height="100%" alt="thekweddingconvention_roadmap" />
-                                </a >
+                                <CopyToClipboard text="더케이웨딩컨벤션수원" onCopy={handleCopy}>
+                                    <a href="https://map.kakao.com/link/search/더케이웨딩컨벤션수원" target="_blank" rel="noreferrer">
+                                        <img className="map" src={thekwedding} width="100%" height="100%" alt="thekweddingconvention_roadmap" />
+                                    </a >
+                                </CopyToClipboard>
                             </div>
                         </div>
                     </div>
