@@ -116,7 +116,7 @@ const Landing = () => {
                 <div className="greeting-info">
                     (故)한백희 · 장인숙 <span className="greeting-info-small">의 장남</span> <span className="greeting-info-medium">현규</span>
                     <br />
-                    김준수 · 이장모 <span className="greeting-info-small">의 장녀</span> <span className="greeting-info-medium">인혜</span>
+                    김동연 · 김순비 <span className="greeting-info-small">의 장녀</span> <span className="greeting-info-medium">인혜</span>
                 </div>
             </section>
             <section className="banner-section">
