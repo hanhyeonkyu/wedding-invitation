@@ -283,15 +283,15 @@ const Landing = () => {
                     {isBride ? (
                         <div>
                             <h3>신부(김인혜)에게 마음 보내기</h3>
-                            <CopyToClipboard text="카카오뱅크 3333-15-8460877" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }}>카카오뱅크 3333-15-8460877</span><span> ⬅️ Copy</span></span></CopyToClipboard>
-                            <h3>혼주에게 마음 보내기</h3>
+                            <CopyToClipboard text="신한 110-424-549126" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }}>카카오뱅크 3333-15-8460877</span><span> ⬅️ Copy</span></span></CopyToClipboard>
+                            <h3>혼주(김순비)에게 마음 보내기</h3>
                             <CopyToClipboard text="농협 235100-56-030476" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }}>농협 235100-56-030476</span><span> ⬅️ Copy</span></span></CopyToClipboard>
                         </div>
                     ) : (
                         <div>
                             <h3>신랑(한현규)에게 마음 보내기</h3>
                             <CopyToClipboard text="카카오뱅크 3333-05-7361141" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }}>카카오뱅크 3333-15-8460877</span><span> ⬅️ Copy</span></span></CopyToClipboard>
-                            <h3>혼주에게 마음 보내기</h3>
+                            <h3>혼주(장인숙)에게 마음 보내기</h3>
                             <CopyToClipboard text="국민은행 603701-04-131030" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }}>국민은행 603701-04-131030</span><span> ⬅️ Copy</span></span></CopyToClipboard>
                         </div>
                     )}
