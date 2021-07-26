@@ -6,6 +6,20 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import "./Landing.css"
 import thekwedding from './thekwedding.png';
+import main from "./main.jpeg"
+import galary001 from "./galary001.jpeg"
+import galary002 from "./galary002.jpeg"
+import galary003 from "./galary003.jpeg"
+import galary004 from "./galary004.jpeg"
+import galary005 from "./galary005.jpeg"
+import galary006 from "./galary006.jpeg"
+import galary007 from "./galary007.jpeg"
+import galary008 from "./galary008.jpeg"
+import galary009 from "./galary009.jpeg"
+import galary010 from "./galary010.jpeg"
+import galary011 from "./galary011.jpeg"
+import galary012 from "./galary012.jpeg"
+
 import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
@@ -29,47 +43,94 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
     },
+    gpaper: {
+        position: 'absolute',
+        width: '90vw',
+        backgroundColor: theme.palette.background.paper,
+        border: '2px solid #000',
+        boxShadow: theme.shadows[5],
+    }
 }));
 
 const tileData = [
     {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQcR4xLb_1NKaQImItdLkd2GpmaNAaGIE4vKm24COWn6uzrF88pU2BNnO6GtZIEKOBgZ0&usqp=CAU",
-        title: 'Image',
-        author: 'author',
+        img: galary001,
+        title: 'galary001',
+        author: 'alex',
         cols: 2,
     }, {
-        img: "https://www.gardeningknowhow.com/wp-content/uploads/2020/12/lonely-japanese-cherry.jpg",
-        title: 'Image',
-        author: 'author',
+        img: galary002,
+        title: 'galary002',
+        author: 'alex',
         cols: 1,
     }, {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlwaE17Jsb6NCfT4mkWeD_RnDfV4N7Rcu3XhsL-Ba1AYjeirt3gX79EMYcHuoPgA2Zzow&usqp=CAU",
-        title: 'Image',
-        author: 'author',
+        img: galary003,
+        title: 'galary003',
+        author: 'alex',
         cols: 1,
     }, {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdTkDD_QeM9vcMiNr2Y8U7PrdqwCBike6kld_xpYCO0oWAAcjz9jz3e809EiOupoZLV8I&usqp=CAU",
-        title: 'Image',
-        author: 'author',
+        img: galary004,
+        title: 'galary004',
+        author: 'alex',
+        cols: 2,
+    }, {
+        img: galary012,
+        title: 'galary012',
+        author: 'alex',
         cols: 1,
     }, {
-        img: "https://www.gardeningknowhow.com/wp-content/uploads/2020/12/lonely-japanese-cherry.jpg",
-        title: 'Image',
-        author: 'author',
+        img: galary005,
+        title: 'galary005',
+        author: 'alex',
+        cols: 1,
+    }, {
+        img: galary006,
+        title: 'galary006',
+        author: 'alex',
+        cols: 1,
+    }, {
+        img: galary007,
+        title: 'galary007',
+        author: 'alex',
+        cols: 2,
+    }, {
+        img: galary008,
+        title: 'galary008',
+        author: 'alex',
+        cols: 1,
+    }, {
+        img: galary009,
+        title: 'galary009',
+        author: 'alex',
+        cols: 1,
+    }, {
+        img: galary010,
+        title: 'galary010',
+        author: 'alex',
+        cols: 2,
+    }, {
+        img: galary011,
+        title: 'galary011',
+        author: 'alex',
         cols: 1,
     }
-
 ];
 
 const Landing = () => {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
+    const [gopen, setGopen] = React.useState(false);
+    const [imag, setImg] = React.useState(galary001)
     const [sopen, setSopen] = React.useState(false);
     const [isBride, setIsBride] = React.useState(true)
     const handleOpen = (isBride) => {
         setIsBride(isBride)
         setOpen(true);
     };
+    const handleGalary = (img) => {
+        setImg(img)
+        setGopen(true)
+    }
     const handleCopy = () => {
         setSopen(true)
     }
@@ -78,6 +139,8 @@ const Landing = () => {
             setOpen(false);
         } else if (target === 'snack') {
             setSopen(false)
+        } else if (target === 'galary') {
+            setGopen(false)
         }
     };
     return (
@@ -85,7 +148,7 @@ const Landing = () => {
             <section className="visual-section">
                 <div className="vertical-item-date"><span className="date-string">10</span>月<span className="date-string">24</span>日</div>
                 <div className="vertical-item-photo">
-                    <img src="http://image.newsis.com/2020/11/01/NISI20201101_0000628102_web.jpg" alt="main" style={{ width: '85vw' }} />
+                    <img src={main} alt="main" style={{ width: '85vw' }} />
                 </div>
                 <div className="vertical-item-info">
                     <p className="info-major">한현규 ♥️ 김인혜</p>
@@ -132,7 +195,7 @@ const Landing = () => {
                             <IconButton aria-label="phone-call-to-groom">
                                 <a href="tel:01057137283"><PhoneRounded color="primary" /></a>
                             </IconButton>
-                            <IconButton aria-label="phone-call-to-groom">
+                            <IconButton color="default" aria-label="message-to-groom">
                                 <a href="sms:01057137283"><EmailRounded color="action" /></a>
                             </IconButton>
                         </div>
@@ -143,7 +206,7 @@ const Landing = () => {
                             <IconButton aria-label="phone-call-to-bride">
                                 <a href="tel:01020130659"><PhoneRounded color="secondary" /></a>
                             </IconButton>
-                            <IconButton color="default" aria-label="phone-call-to-bride">
+                            <IconButton color="default" aria-label="message-to-bride">
                                 <a href="sms:01020130659"><EmailRounded color="action" /></a>
                             </IconButton>
                         </div>
@@ -161,7 +224,7 @@ const Landing = () => {
                     <GridList cellHeight={160} className={classes.gridList} cols={3}>
                         {tileData.map((tile, index) => (
                             <GridListTile key={index} cols={tile.cols || 1}>
-                                <img src={tile.img} alt={tile.title} />
+                                <img src={tile.img} alt={tile.title} onClick={(e) => handleGalary(tile.img)} />
                             </GridListTile>
                         ))}
                     </GridList>
@@ -220,13 +283,25 @@ const Landing = () => {
                         <div>
                             <h3>신부(김인혜)에게 마음 보내기</h3>
                             <CopyToClipboard text="카카오뱅크 3333-15-8460877" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }}>카카오뱅크 3333-15-8460877</span><span> ⬅️ Copy</span></span></CopyToClipboard>
+                            <h3>혼주에게 마음 보내기</h3>
+                            <CopyToClipboard text="농협 235100-56-030476" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }}>농협 235100-56-030476</span><span> ⬅️ Copy</span></span></CopyToClipboard>
                         </div>
                     ) : (
                         <div>
                             <h3>신랑(한현규)에게 마음 보내기</h3>
                             <CopyToClipboard text="카카오뱅크 3333-05-7361141" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }}>카카오뱅크 3333-15-8460877</span><span> ⬅️ Copy</span></span></CopyToClipboard>
+                            <h3>혼주에게 마음 보내기</h3>
+                            <CopyToClipboard text="국민은행 603701-04-131030" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }}>국민은행 603701-04-131030</span><span> ⬅️ Copy</span></span></CopyToClipboard>
                         </div>
                     )}
+                </div>
+            </Modal>
+            <Modal
+                open={gopen}
+                onClose={(e) => handleClose("galary")}
+            >
+                <div style={{ top: `40%`, left: `32%`, transform: `translate(-30%, -30%)`, textAlign: 'left', backgroundColor: "aliceblue", borderColor: "aliceblue" }} className={classes.gpaper}>
+                    <img src={imag} alt={"galary"} width={"100%"} />
                 </div>
             </Modal>
             <Snackbar
