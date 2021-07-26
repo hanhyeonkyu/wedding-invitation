@@ -234,7 +234,7 @@ const Landing = () => {
                 open={sopen}
                 onClose={(e) => handleClose("snack")}
                 autoHideDuration={2}
-                message={"복사됐어요!"}
+                message={"copied!"}
                 key={sopen}
             />
         </div>
