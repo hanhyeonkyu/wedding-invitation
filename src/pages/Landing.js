@@ -145,7 +145,7 @@ const Landing = () => {
     };
     return (
         <div className="wrapper">
-            <section className="visual-section">
+            <section className="visual-section" style={{ marginBottom: "10rem" }}>
                 <div className="vertical-item-date"><span className="date-string">10</span>月<span className="date-string">24</span>日</div>
                 <div className="vertical-item-photo">
                     <img src={main} alt="main" style={{ width: '85vw' }} />
@@ -268,10 +268,10 @@ const Landing = () => {
             <div className="section-divider" />
             <section className="money-section">
                 <div style={{ marginBottom: '1rem' }}>
-                    신랑측 마음 <Button onClick={(e) => handleOpen(false)} style={{ borderRadius: "1rem", marginLeft: '1rem' }} size="large" variant="contained" color="primary">계좌번호 보기</Button>
+                    신랑측에게 마음 보내기 <Button onClick={(e) => handleOpen(false)} style={{ borderRadius: "1rem", marginLeft: '1rem' }} size="large" variant="contained" color="primary">계좌번호 보기</Button>
                 </div>
                 <div style={{ marginBottom: '1rem' }}>
-                    신부측 마음 <Button onClick={(e) => handleOpen(true)} style={{ borderRadius: "1rem", marginLeft: '1rem' }} size="large" variant="contained" color="secondary">계좌번호 보기</Button>
+                    신부측에게 마음 보내기 <Button onClick={(e) => handleOpen(true)} style={{ borderRadius: "1rem", marginLeft: '1rem' }} size="large" variant="contained" color="secondary">계좌번호 보기</Button>
                 </div>
             </section>
             <Modal
