@@ -233,8 +233,8 @@ const Landing = () => {
                 anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
                 open={sopen}
                 onClose={(e) => handleClose("snack")}
-                autoHideDuration={2}
-                message={"copied!"}
+                autoHideDuration={1500}
+                message={"복사됐어요!"}
                 key={sopen}
             />
         </div>
