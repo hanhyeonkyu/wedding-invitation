@@ -98,20 +98,20 @@ const Landing = () => {
                 <div className="greeting-tit">" 이제 서로, 평생 함께 "</div>
                 <div className="greeting-txt">
                     서로가 마주보며 다져온 사랑을
-                <br />
-                이제 함께 한 곳을 바라보며
-                <br />
-                걸어갈 수 있는 큰 사랑으로
-                <br />
-                키우고자 합니다.
-                <br />
-                저희 두 사람이 사랑의 이름으로
-                <br />
-                지켜나갈 수 있도록
-                <br />
-                앞날을 축복해 주시면
-                <br />
-                 감사하겠습니다.
+                    <br />
+                    이제 함께 한 곳을 바라보며
+                    <br />
+                    걸어갈 수 있는 큰 사랑으로
+                    <br />
+                    키우고자 합니다.
+                    <br />
+                    저희 두 사람이 사랑의 이름으로
+                    <br />
+                    지켜나갈 수 있도록
+                    <br />
+                    앞날을 축복해 주시면
+                    <br />
+                    감사하겠습니다.
                 </div>
                 <div className="greeting-info">
                     (故)한백희 · 장인숙 <span className="greeting-info-small">의 장남</span> <span className="greeting-info-medium">현규</span>
@@ -168,10 +168,10 @@ const Landing = () => {
                 </div>
                 <div className="gallery-txt">
                     두 사람의
-                <br />
-                아름다운 시작을
-                <br />
-                함께 해주세요.
+                    <br />
+                    아름다운 시작을
+                    <br />
+                    함께 해주세요.
                 </div>
             </section>
             <section className="location-section">
@@ -215,22 +215,17 @@ const Landing = () => {
                 open={open}
                 onClose={(e) => handleClose("modal")}
             >
-                <div style={{
-                    top: `30%`,
-                    left: `30%`,
-                    transform: `translate(-30%, -30%)`,
-                    textAlign: 'left'
-                }} className={classes.paper}>
+                <div style={{ top: `30%`, left: `30%`, transform: `translate(-30%, -30%)`, textAlign: 'left', borderRadius: "2rem", backgroundColor: "aliceblue", borderColor: "aliceblue" }} className={classes.paper}>
                     {isBride ? (
-                        <React.Fragment>
+                        <div>
                             <h3>신부(김인혜)에게 마음 보내기</h3>
-                            <CopyToClipboard style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }} text="카카오뱅크 3333-15-8460877" onCopy={handleCopy}><p>카카오뱅크<br />3333-15-8460877</p></CopyToClipboard>
-                        </React.Fragment>
+                            <CopyToClipboard text="카카오뱅크 3333-15-8460877" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }}>카카오뱅크 3333-15-8460877</span><span> ⬅️ Copy</span></span></CopyToClipboard>
+                        </div>
                     ) : (
-                        <React.Fragment>
+                        <div>
                             <h3>신랑(한현규)에게 마음 보내기</h3>
-                            <CopyToClipboard style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }} text="카카오뱅크 3333-05-7361141" onCopy={handleCopy}><p>카카오뱅크<br />3333-15-8460877</p></CopyToClipboard>
-                        </React.Fragment>
+                            <CopyToClipboard text="카카오뱅크 3333-05-7361141" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }}>카카오뱅크 3333-15-8460877</span><span> ⬅️ Copy</span></span></CopyToClipboard>
+                        </div>
                     )}
                 </div>
             </Modal>
@@ -238,7 +233,8 @@ const Landing = () => {
                 anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
                 open={sopen}
                 onClose={(e) => handleClose("snack")}
-                message="copied!"
+                autoHideDuration={2}
+                message={"복사됐어요!"}
                 key={sopen}
             />
         </div>
