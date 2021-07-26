@@ -17,7 +17,7 @@ import galary007 from "./galary007.jpeg"
 import galary008 from "./galary008.jpeg"
 import galary009 from "./galary009.jpeg"
 import galary010 from "./galary010.jpeg"
-import galary011 from "./galary011.jpeg"
+// import galary011 from "./galary011.jpeg"
 import galary012 from "./galary012.jpeg"
 
 import React from 'react';
@@ -108,12 +108,13 @@ const tileData = [
         title: 'galary010',
         author: 'alex',
         cols: 2,
-    }, {
-        img: galary011,
-        title: 'galary011',
-        author: 'alex',
-        cols: 1,
-    }
+    },
+    // {
+    //     img: galary011,
+    //     title: 'galary011',
+    //     author: 'alex',
+    //     cols: 1,
+    // }
 ];
 
 const Landing = () => {
