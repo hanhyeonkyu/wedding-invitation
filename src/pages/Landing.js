@@ -161,19 +161,19 @@ const Landing = () => {
             <section className="greeting-section">
                 <div className="greeting-tit">" 이제 서로, 평생 함께 "</div>
                 <div className="greeting-txt">
-                    서로가 마주보며 다져온 사랑을
+                    가을 햇살 한 줄기,
                     <br />
-                    이제 함께 한 곳을 바라보며
+                    산들 바람 한 점에도
                     <br />
-                    걸어갈 수 있는 큰 사랑으로
+                    하하호호 웃으며
                     <br />
-                    키우고자 합니다.
+                    함께 걸을 수 있는 사람을
                     <br />
-                    저희 두 사람이 사랑의 이름으로
+                    만났습니다.
                     <br />
-                    지켜나갈 수 있도록
+                    오셔서 저희의 산책길을
                     <br />
-                    앞날을 축복해 주시면
+                    축복으로 물들여주시면
                     <br />
                     감사하겠습니다.
                 </div>
@@ -220,7 +220,7 @@ const Landing = () => {
             </section>
             <div className="section-divider" />
             <section className="gallery-section">
-                <div className="gallery-tit">" 행복한 날들 "</div>
+                <div className="gallery-tit">" Gallery "</div>
                 <div className={classes.gallarygrid}>
                     <GridList cellHeight={160} className={classes.gridList} cols={3}>
                         {tileData.map((tile, index) => (
