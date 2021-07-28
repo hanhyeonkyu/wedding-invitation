@@ -67,7 +67,7 @@
 
 .greeting-tit {
     margin-bottom: 2.5rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
     line-height: 1;
     text-align: center;
@@ -76,7 +76,7 @@
 }
 
 .greeting-txt {
-    font-size: 0.9rem;
+    font-size: 0.98rem;
     font-weight: 600;
     line-height: 1.8rem;
     color: #000;
@@ -180,7 +180,7 @@
 
 .gallery-tit {
     margin-bottom: 2.5rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
     line-height: 1;
     text-align: center;
@@ -210,7 +210,7 @@
 
 .location-tit {
     margin-bottom: 2.5rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
     line-height: 1;
     text-align: center;

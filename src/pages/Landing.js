@@ -191,7 +191,7 @@ const Landing = () => {
                 </div>
                 <div className="vertical-item-info">
                     <p className="info-major">한현규 ♥️ 김인혜</p>
-                    <p className="info-text">2021. 10. 24. SUN PM 12:10</p>
+                    <p className="info-text">2021. 10. 24. 일요일 오후 12:10</p>
                     <p className="info-text">더케이웨딩컨벤션 웨딩홀 2층</p>
                 </div>
             </section>
