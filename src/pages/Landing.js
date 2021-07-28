@@ -23,7 +23,6 @@ import galary013 from "./galary013.jpeg"
 import galary014 from "./galary014.jpeg"
 import galary015 from "./galary015.jpeg"
 import galary016 from "./galary016.jpeg"
-import galary017 from "./galary017.jpeg"
 
 import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -74,10 +73,15 @@ const tileData = [
         author: 'alex',
         cols: 1,
     }, {
+        img: galary011,
+        title: 'galary011',
+        author: 'alex',
+        cols: 2,
+    }, {
         img: galary004,
         title: 'galary004',
         author: 'alex',
-        cols: 2,
+        cols: 1,
     }, {
         img: galary005,
         title: 'galary005',
@@ -89,15 +93,10 @@ const tileData = [
         author: 'alex',
         cols: 1,
     }, {
-        img: galary016,
-        title: 'galary016',
-        author: 'alex',
-        cols: 1,
-    }, {
         img: galary007,
         title: 'galary007',
         author: 'alex',
-        cols: 2,
+        cols: 1,
     }, {
         img: galary008,
         title: 'galary008',
@@ -111,11 +110,6 @@ const tileData = [
     }, {
         img: galary010,
         title: 'galary010',
-        author: 'alex',
-        cols: 2,
-    }, {
-        img: galary011,
-        title: 'galary011',
         author: 'alex',
         cols: 1,
     }, {
@@ -139,8 +133,8 @@ const tileData = [
         author: 'alex',
         cols: 1,
     }, {
-        img: galary017,
-        title: 'galary017',
+        img: galary016,
+        title: 'galary016',
         author: 'alex',
         cols: 1,
     }
@@ -275,7 +269,7 @@ const Landing = () => {
                     </GridList>
                 </div>
                 <div className="gallery-txt">
-                    두 사람의
+                    저희 두 사람의
                     <br />
                     아름다운 시작을
                     <br />
@@ -283,7 +277,7 @@ const Landing = () => {
                 </div>
             </section>
             <section className="location-section">
-                <div className="location-tit">" 함께 가는 길 "</div>
+                <div className="location-tit">" 오시는 길 "</div>
                 <div className="location-map-area">
                     <div className="location-head">
                         <div style={{ display: 'flex', flexDirection: "column" }}>
