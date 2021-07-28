@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/wedding-invitation/static/css/main.002c4ba0.chunk.css",
+    "main.css": "/wedding-invitation/static/css/main.e532cd90.chunk.css",
     "main.js": "/wedding-invitation/static/js/main.eee65e32.chunk.js",
     "main.js.map": "/wedding-invitation/static/js/main.eee65e32.chunk.js.map",
     "runtime-main.js": "/wedding-invitation/static/js/runtime-main.715f314b.js",
@@ -8,7 +8,7 @@
     "static/js/2.f2bc6762.chunk.js": "/wedding-invitation/static/js/2.f2bc6762.chunk.js",
     "static/js/2.f2bc6762.chunk.js.map": "/wedding-invitation/static/js/2.f2bc6762.chunk.js.map",
     "index.html": "/wedding-invitation/index.html",
-    "static/css/main.002c4ba0.chunk.css.map": "/wedding-invitation/static/css/main.002c4ba0.chunk.css.map",
+    "static/css/main.e532cd90.chunk.css.map": "/wedding-invitation/static/css/main.e532cd90.chunk.css.map",
     "static/js/2.f2bc6762.chunk.js.LICENSE.txt": "/wedding-invitation/static/js/2.f2bc6762.chunk.js.LICENSE.txt",
     "static/media/Landing.css": "/wedding-invitation/static/media/BinggraeⅡ.87f913d9.ttf",
     "static/media/galary001.b1a4fd09.jpeg": "/wedding-invitation/static/media/galary001.b1a4fd09.jpeg",
@@ -33,7 +33,7 @@
   "entrypoints": [
     "static/js/runtime-main.715f314b.js",
     "static/js/2.f2bc6762.chunk.js",
-    "static/css/main.002c4ba0.chunk.css",
+    "static/css/main.e532cd90.chunk.css",
     "static/js/main.eee65e32.chunk.js"
   ]
 }
