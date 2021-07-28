@@ -17,8 +17,13 @@ import galary007 from "./galary007.jpeg"
 import galary008 from "./galary008.jpeg"
 import galary009 from "./galary009.jpeg"
 import galary010 from "./galary010.jpeg"
-// import galary011 from "./galary011.jpeg"
+import galary011 from "./galary011.jpeg"
 import galary012 from "./galary012.jpeg"
+import galary013 from "./galary013.jpeg"
+import galary014 from "./galary014.jpeg"
+import galary015 from "./galary015.jpeg"
+import galary016 from "./galary016.jpeg"
+import galary017 from "./galary017.jpeg"
 
 import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -74,11 +79,6 @@ const tileData = [
         author: 'alex',
         cols: 2,
     }, {
-        img: galary012,
-        title: 'galary012',
-        author: 'alex',
-        cols: 1,
-    }, {
         img: galary005,
         title: 'galary005',
         author: 'alex',
@@ -86,6 +86,11 @@ const tileData = [
     }, {
         img: galary006,
         title: 'galary006',
+        author: 'alex',
+        cols: 1,
+    }, {
+        img: galary016,
+        title: 'galary016',
         author: 'alex',
         cols: 1,
     }, {
@@ -108,19 +113,65 @@ const tileData = [
         title: 'galary010',
         author: 'alex',
         cols: 2,
-    },
-    // {
-    //     img: galary011,
-    //     title: 'galary011',
-    //     author: 'alex',
-    //     cols: 1,
-    // }
+    }, {
+        img: galary011,
+        title: 'galary011',
+        author: 'alex',
+        cols: 1,
+    }, {
+        img: galary012,
+        title: 'galary012',
+        author: 'alex',
+        cols: 1,
+    }, {
+        img: galary013,
+        title: 'galary013',
+        author: 'alex',
+        cols: 1,
+    }, {
+        img: galary014,
+        title: 'galary014',
+        author: 'alex',
+        cols: 1,
+    }, {
+        img: galary015,
+        title: 'galary015',
+        author: 'alex',
+        cols: 1,
+    }, {
+        img: galary017,
+        title: 'galary017',
+        author: 'alex',
+        cols: 1,
+    }
 ];
 
 const Landing = () => {
     const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
     const [gopen, setGopen] = React.useState(false);
+    const handleClose = (target) => {
+        if (target === 'modal') {
+            setOpen(false);
+            revivalBack()
+        } else if (target === 'snack') {
+            setSopen(false)
+        } else if (target === 'galary') {
+            setGopen(false)
+        }
+    };
+    const neutralizeBack = (callback) => {
+        window.history.pushState(null, "", window.location.href);
+        window.onpopstate = () => {
+            window.history.pushState(null, "", window.location.href);
+            callback('galary');
+        };
+    };
+    const revivalBack = () => {
+        window.onpopstate = undefined;
+        window.history.back();
+    };
+    const [open, setOpen] = React.useState(false);
+
     const [imag, setImg] = React.useState(galary001)
     const [sopen, setSopen] = React.useState(false);
     const [isBride, setIsBride] = React.useState(true)
@@ -131,19 +182,12 @@ const Landing = () => {
     const handleGalary = (img) => {
         setImg(img)
         setGopen(true)
+        neutralizeBack(handleClose)
     }
     const handleCopy = () => {
         setSopen(true)
     }
-    const handleClose = (target) => {
-        if (target === 'modal') {
-            setOpen(false);
-        } else if (target === 'snack') {
-            setSopen(false)
-        } else if (target === 'galary') {
-            setGopen(false)
-        }
-    };
+
     return (
         <div className="wrapper">
             <section className="visual-section" style={{ marginBottom: "10rem" }}>
