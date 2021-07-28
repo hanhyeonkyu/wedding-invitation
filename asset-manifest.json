@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/wedding-invitation/static/css/main.810b9a61.chunk.css",
-    "main.js": "/wedding-invitation/static/js/main.e90ffe5f.chunk.js",
-    "main.js.map": "/wedding-invitation/static/js/main.e90ffe5f.chunk.js.map",
+    "main.css": "/wedding-invitation/static/css/main.efc92bc1.chunk.css",
+    "main.js": "/wedding-invitation/static/js/main.eee65e32.chunk.js",
+    "main.js.map": "/wedding-invitation/static/js/main.eee65e32.chunk.js.map",
     "runtime-main.js": "/wedding-invitation/static/js/runtime-main.715f314b.js",
     "runtime-main.js.map": "/wedding-invitation/static/js/runtime-main.715f314b.js.map",
     "static/js/2.f2bc6762.chunk.js": "/wedding-invitation/static/js/2.f2bc6762.chunk.js",
     "static/js/2.f2bc6762.chunk.js.map": "/wedding-invitation/static/js/2.f2bc6762.chunk.js.map",
     "index.html": "/wedding-invitation/index.html",
-    "static/css/main.810b9a61.chunk.css.map": "/wedding-invitation/static/css/main.810b9a61.chunk.css.map",
+    "static/css/main.efc92bc1.chunk.css.map": "/wedding-invitation/static/css/main.efc92bc1.chunk.css.map",
     "static/js/2.f2bc6762.chunk.js.LICENSE.txt": "/wedding-invitation/static/js/2.f2bc6762.chunk.js.LICENSE.txt",
     "static/media/galary001.b1a4fd09.jpeg": "/wedding-invitation/static/media/galary001.b1a4fd09.jpeg",
     "static/media/galary002.c301c953.jpeg": "/wedding-invitation/static/media/galary002.c301c953.jpeg",
@@ -25,15 +25,14 @@
     "static/media/galary013.32579bbd.jpeg": "/wedding-invitation/static/media/galary013.32579bbd.jpeg",
     "static/media/galary014.5f54769f.jpeg": "/wedding-invitation/static/media/galary014.5f54769f.jpeg",
     "static/media/galary015.bf0be00d.jpeg": "/wedding-invitation/static/media/galary015.bf0be00d.jpeg",
-    "static/media/galary016.86139e12.jpeg": "/wedding-invitation/static/media/galary016.86139e12.jpeg",
-    "static/media/galary017.5c0ebda3.jpeg": "/wedding-invitation/static/media/galary017.5c0ebda3.jpeg",
+    "static/media/galary016.5c0ebda3.jpeg": "/wedding-invitation/static/media/galary016.5c0ebda3.jpeg",
     "static/media/main.fefd6e2f.jpeg": "/wedding-invitation/static/media/main.fefd6e2f.jpeg",
     "static/media/thekwedding.dca2d52c.png": "/wedding-invitation/static/media/thekwedding.dca2d52c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.715f314b.js",
     "static/js/2.f2bc6762.chunk.js",
-    "static/css/main.810b9a61.chunk.css",
-    "static/js/main.e90ffe5f.chunk.js"
+    "static/css/main.efc92bc1.chunk.css",
+    "static/js/main.eee65e32.chunk.js"
   ]
 }
