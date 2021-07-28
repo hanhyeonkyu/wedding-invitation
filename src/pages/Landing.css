@@ -1,7 +1,22 @@
+@font-face {
+    font-family: "Binggrae2";
+    src: url("../fonts/BinggraeⅡ.ttf");
+}
+
+@font-face {
+    font-family: "BinggraeMelona";
+    src: url("../fonts/BinggraeMelona.ttf");
+}
+
+@font-face {
+    font-family: "BinggraeTaom";
+    src: url("../fonts/BinggraeTaom.ttf");
+}
+
 .wrapper {
     margin: 0;
     padding: 0;
-    font-family: 'Nanum Myeongjo', 'Nanum Gothic', sans-serif, 'helvetica', serif, 'AppleGothic';
+    font-family: 'BinggraeMelona';
     text-align: center;
 }
 
@@ -29,6 +44,7 @@
 .vertical-item-info {
     text-align: right;
     margin-right: 2.4rem;
+    font-family: 'BinggraeMelona';
 }
 
 .info-major {
@@ -73,6 +89,7 @@
     padding-bottom: 4.063rem;
     max-width: 55vw;
     margin: auto;
+    font-family: "BinggraeMelona";
 }
 
 .greeting-txt::after {
