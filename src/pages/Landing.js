@@ -146,7 +146,6 @@ const Landing = () => {
     const handleClose = (target) => {
         if (target === 'modal') {
             setOpen(false);
-            revivalBack()
         } else if (target === 'snack') {
             setSopen(false)
         } else if (target === 'galary') {
@@ -160,12 +159,7 @@ const Landing = () => {
             callback('galary');
         };
     };
-    const revivalBack = () => {
-        window.onpopstate = undefined;
-        window.history.back();
-    };
     const [open, setOpen] = React.useState(false);
-
     const [imag, setImg] = React.useState(galary001)
     const [sopen, setSopen] = React.useState(false);
     const [isBride, setIsBride] = React.useState(true)
