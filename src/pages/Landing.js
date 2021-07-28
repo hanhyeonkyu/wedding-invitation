@@ -179,7 +179,7 @@ const Landing = () => {
     return (
         <div className="wrapper">
             <section className="visual-section" style={{ marginBottom: "10rem" }}>
-                <div className="vertical-item-date"><span className="date-string">10</span>月<span className="date-string">24</span>日</div>
+                {/* <div className="vertical-item-date"><span className="date-string">10</span>月<span className="date-string">24</span>日</div> */}
                 <div className="vertical-item-photo">
                     <img src={main} alt="main" style={{ width: '85vw' }} />
                 </div>
