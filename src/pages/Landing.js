@@ -2,27 +2,27 @@ import { Button, IconButton, Modal, Snackbar } from '@material-ui/core';
 import { EmailRounded, PhoneRounded } from '@material-ui/icons';
 import CountDown from '../comps/CountDown';
 import { makeStyles } from '@material-ui/core/styles';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
+import Carousel from 'react-gallery-carousel';
+import 'react-gallery-carousel/dist/index.css';
 import "./Landing.css"
-import thekwedding from './thekwedding.png';
-import main from "./main.jpeg"
-import galary001 from "./galary001.jpeg"
-import galary002 from "./galary002.jpeg"
-import galary003 from "./galary003.jpeg"
-import galary004 from "./galary004.jpeg"
-import galary005 from "./galary005.jpeg"
-import galary006 from "./galary006.jpeg"
-import galary007 from "./galary007.jpeg"
-import galary008 from "./galary008.jpeg"
-import galary009 from "./galary009.jpeg"
-import galary010 from "./galary010.jpeg"
-import galary011 from "./galary011.jpeg"
-import galary012 from "./galary012.jpeg"
-import galary013 from "./galary013.jpeg"
-import galary014 from "./galary014.jpeg"
-import galary015 from "./galary015.jpeg"
-import galary016 from "./galary016.jpeg"
+import thekwedding from '../imgs/thekwedding.png';
+import main from "../imgs/main.jpeg"
+import galary001 from "../imgs/galary001.jpeg"
+import galary002 from "../imgs/galary002.jpeg"
+import galary003 from "../imgs/galary003.jpeg"
+import galary004 from "../imgs/galary004.jpeg"
+import galary005 from "../imgs/galary005.jpeg"
+import galary006 from "../imgs/galary006.jpeg"
+import galary007 from "../imgs/galary007.jpeg"
+import galary008 from "../imgs/galary008.jpeg"
+import galary009 from "../imgs/galary009.jpeg"
+import galary010 from "../imgs/galary010.jpeg"
+import galary011 from "../imgs/galary011.jpeg"
+import galary012 from "../imgs/galary012.jpeg"
+import galary013 from "../imgs/galary013.jpeg"
+import galary014 from "../imgs/galary014.jpeg"
+import galary015 from "../imgs/galary015.jpeg"
+import galary016 from "../imgs/galary016.jpeg"
 
 import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.paper,
         border: '2px solid #000',
         boxShadow: theme.shadows[5],
-        padding: theme.spacing(2, 4, 3),
+        padding: '1rem 2rem 2rem 2rem',
     },
     gpaper: {
         position: 'absolute',
@@ -56,122 +56,27 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const tileData = [
-    {
-        img: galary001,
-        title: 'galary001',
-        author: 'alex',
-        cols: 2,
-    }, {
-        img: galary002,
-        title: 'galary002',
-        author: 'alex',
-        cols: 1,
-    }, {
-        img: galary003,
-        title: 'galary003',
-        author: 'alex',
-        cols: 1,
-    }, {
-        img: galary011,
-        title: 'galary011',
-        author: 'alex',
-        cols: 2,
-    }, {
-        img: galary004,
-        title: 'galary004',
-        author: 'alex',
-        cols: 1,
-    }, {
-        img: galary005,
-        title: 'galary005',
-        author: 'alex',
-        cols: 1,
-    }, {
-        img: galary006,
-        title: 'galary006',
-        author: 'alex',
-        cols: 1,
-    }, {
-        img: galary007,
-        title: 'galary007',
-        author: 'alex',
-        cols: 1,
-    }, {
-        img: galary008,
-        title: 'galary008',
-        author: 'alex',
-        cols: 1,
-    }, {
-        img: galary009,
-        title: 'galary009',
-        author: 'alex',
-        cols: 1,
-    }, {
-        img: galary010,
-        title: 'galary010',
-        author: 'alex',
-        cols: 1,
-    }, {
-        img: galary012,
-        title: 'galary012',
-        author: 'alex',
-        cols: 1,
-    }, {
-        img: galary013,
-        title: 'galary013',
-        author: 'alex',
-        cols: 1,
-    }, {
-        img: galary014,
-        title: 'galary014',
-        author: 'alex',
-        cols: 1,
-    }, {
-        img: galary015,
-        title: 'galary015',
-        author: 'alex',
-        cols: 1,
-    }, {
-        img: galary016,
-        title: 'galary016',
-        author: 'alex',
-        cols: 1,
-    }
+
+const carouselData = [
+    { src: galary001, }, { src: galary002, }, { src: galary003, }, { src: galary011, }, { src: galary004, }, { src: galary005, }, { src: galary006, }, { src: galary007, }, { src: galary008, }, { src: galary009, }, { src: galary010, }, { src: galary012, }, { src: galary013, }, { src: galary014, }, { src: galary015, }, { src: galary016 }
 ];
 
 const Landing = () => {
     const classes = useStyles();
-    const [gopen, setGopen] = React.useState(false);
     const handleClose = (target) => {
         if (target === 'modal') {
             setOpen(false);
         } else if (target === 'snack') {
             setSopen(false)
-        } else if (target === 'galary') {
-            setGopen(false)
         }
     };
-    const neutralizeBack = (callback) => {
-        window.history.pushState(null, "", window.location.href);
-        window.onpopstate = () => {
-            window.history.pushState(null, "", window.location.href);
-            callback('galary');
-        };
-    };
     const [open, setOpen] = React.useState(false);
-    const [imag, setImg] = React.useState(galary001)
     const [sopen, setSopen] = React.useState(false);
     const [isBride, setIsBride] = React.useState(true)
     const handleOpen = (isBride) => {
         setIsBride(isBride)
         setOpen(true);
     };
-    const handleGalary = (img) => {
-        setImg(img)
-        setGopen(true)
-        neutralizeBack(handleClose)
-    }
     const handleCopy = () => {
         setSopen(true)
     }
@@ -254,13 +159,7 @@ const Landing = () => {
             <section className="gallery-section">
                 <div className="gallery-tit">" Gallery "</div>
                 <div className={classes.gallarygrid}>
-                    <GridList cellHeight={160} className={classes.gridList} cols={3}>
-                        {tileData.map((tile, index) => (
-                            <GridListTile key={index} cols={tile.cols || 1}>
-                                <img src={tile.img} alt={tile.title} onClick={(e) => handleGalary(tile.img)} />
-                            </GridListTile>
-                        ))}
-                    </GridList>
+                    <Carousel images={carouselData} style={{ height: 500, width: 800 }} />
                 </div>
                 <div className="gallery-txt">
                     저희 두 사람의
@@ -301,40 +200,29 @@ const Landing = () => {
             <div className="section-divider" />
             <section className="money-section">
                 <div style={{ marginBottom: '1rem' }}>
-                    신랑측에게 마음 보내기 <Button onClick={(e) => handleOpen(false)} style={{ borderRadius: "1rem", marginLeft: '1rem' }} size="large" variant="contained" color="primary">계좌번호 보기</Button>
+                    신랑측에게 마음 보내기 <Button onClick={(e) => handleOpen(false)} style={{ borderRadius: "1rem", marginLeft: '1rem', fontFamily: 'BinggraeMelona', fontWeight: 'bold' }} size="large" variant="contained" color="primary">계좌번호 보기</Button>
                 </div>
                 <div style={{ marginBottom: '1rem' }}>
-                    신부측에게 마음 보내기 <Button onClick={(e) => handleOpen(true)} style={{ borderRadius: "1rem", marginLeft: '1rem' }} size="large" variant="contained" color="secondary">계좌번호 보기</Button>
+                    신부측에게 마음 보내기 <Button onClick={(e) => handleOpen(true)} style={{ borderRadius: "1rem", marginLeft: '1rem', fontFamily: 'BinggraeMelona', fontWeight: 'bold' }} size="large" variant="contained" color="secondary">계좌번호 보기</Button>
                 </div>
             </section>
-            <Modal
-                open={open}
-                onClose={(e) => handleClose("modal")}
-            >
-                <div style={{ top: `30%`, left: `30%`, transform: `translate(-30%, -30%)`, textAlign: 'left', borderRadius: "2rem", backgroundColor: "aliceblue", borderColor: "aliceblue" }} className={classes.paper}>
+            <Modal open={open} onClose={(e) => handleClose("modal")} >
+                <div style={{ top: `30%`, left: `30%`, transform: `translate(-30%, -30%)`, textAlign: 'left', backgroundColor: "rgb(255 239 203)", border: '5px double rgb(148 133 22 / 63%)', borderRadius: '14px 14px 14px 14px', fontFamily: 'BinggraeMelona' }} className={classes.paper}>
                     {isBride ? (
                         <div>
-                            <h3>신부(김인혜)에게 마음 보내기</h3>
-                            <CopyToClipboard text="신한 110-424-549126" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }}>카카오뱅크 3333-15-8460877</span><span> ⬅️ Copy</span></span></CopyToClipboard>
-                            <h3>혼주(김순비)에게 마음 보내기</h3>
-                            <CopyToClipboard text="농협 235100-56-030476" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }}>농협 235100-56-030476</span><span> ⬅️ Copy</span></span></CopyToClipboard>
+                            <h4>신부(김인혜)에게 마음 보내기</h4>
+                            <CopyToClipboard text="신한 110-424-549126" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 'bold', textDecorationLine: "underline" }}>카카오뱅크 3333-15-8460877</span><span> ⬅️ 복사하기</span></span></CopyToClipboard>
+                            <h4>혼주(김순비)에게 마음 보내기</h4>
+                            <CopyToClipboard text="농협 235100-56-030476" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 'bold', textDecorationLine: "underline" }}>농협 235100-56-030476</span><span> ⬅️ 복사하기</span></span></CopyToClipboard>
                         </div>
                     ) : (
                         <div>
-                            <h3>신랑(한현규)에게 마음 보내기</h3>
-                            <CopyToClipboard text="카카오뱅크 3333-05-7361141" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }}>카카오뱅크 3333-15-8460877</span><span> ⬅️ Copy</span></span></CopyToClipboard>
-                            <h3>혼주(장인숙)에게 마음 보내기</h3>
-                            <CopyToClipboard text="국민은행 603701-04-131030" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 500, textDecorationLine: "underline" }}>국민은행 603701-04-131030</span><span> ⬅️ Copy</span></span></CopyToClipboard>
+                            <h4>신랑(한현규)에게 마음 보내기</h4>
+                            <CopyToClipboard text="카카오뱅크 3333-05-7361141" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 'bold', textDecorationLine: "underline" }}>카카오뱅크 3333-15-8460877</span><span> ⬅️ 복사하기</span></span></CopyToClipboard>
+                            <h4>혼주(장인숙)에게 마음 보내기</h4>
+                            <CopyToClipboard text="국민은행 603701-04-131030" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 'bold', textDecorationLine: "underline" }}>국민은행 603701-04-131030</span><span> ⬅️ 복사하기</span></span></CopyToClipboard>
                         </div>
                     )}
-                </div>
-            </Modal>
-            <Modal
-                open={gopen}
-                onClose={(e) => handleClose("galary")}
-            >
-                <div style={{ top: `40%`, left: `32%`, transform: `translate(-30%, -30%)`, textAlign: 'left', backgroundColor: "aliceblue", borderColor: "aliceblue" }} className={classes.gpaper}>
-                    <img src={imag} alt={"galary"} width={"100%"} />
                 </div>
             </Modal>
             <Snackbar
