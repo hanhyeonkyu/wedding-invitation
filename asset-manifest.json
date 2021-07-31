@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/wedding-invitation/static/css/main.67dd0db6.chunk.css",
-    "main.js": "/wedding-invitation/static/js/main.fb71bff8.chunk.js",
-    "main.js.map": "/wedding-invitation/static/js/main.fb71bff8.chunk.js.map",
+    "main.css": "/wedding-invitation/static/css/main.698c4fe8.chunk.css",
+    "main.js": "/wedding-invitation/static/js/main.bcdade20.chunk.js",
+    "main.js.map": "/wedding-invitation/static/js/main.bcdade20.chunk.js.map",
     "runtime-main.js": "/wedding-invitation/static/js/runtime-main.715f314b.js",
     "runtime-main.js.map": "/wedding-invitation/static/js/runtime-main.715f314b.js.map",
-    "static/js/2.f2bc6762.chunk.js": "/wedding-invitation/static/js/2.f2bc6762.chunk.js",
-    "static/js/2.f2bc6762.chunk.js.map": "/wedding-invitation/static/js/2.f2bc6762.chunk.js.map",
+    "static/css/2.2c9f9580.chunk.css": "/wedding-invitation/static/css/2.2c9f9580.chunk.css",
+    "static/js/2.ca20f32f.chunk.js": "/wedding-invitation/static/js/2.ca20f32f.chunk.js",
+    "static/js/2.ca20f32f.chunk.js.map": "/wedding-invitation/static/js/2.ca20f32f.chunk.js.map",
     "index.html": "/wedding-invitation/index.html",
-    "static/css/main.67dd0db6.chunk.css.map": "/wedding-invitation/static/css/main.67dd0db6.chunk.css.map",
-    "static/js/2.f2bc6762.chunk.js.LICENSE.txt": "/wedding-invitation/static/js/2.f2bc6762.chunk.js.LICENSE.txt",
+    "static/css/2.2c9f9580.chunk.css.map": "/wedding-invitation/static/css/2.2c9f9580.chunk.css.map",
+    "static/css/main.698c4fe8.chunk.css.map": "/wedding-invitation/static/css/main.698c4fe8.chunk.css.map",
+    "static/js/2.ca20f32f.chunk.js.LICENSE.txt": "/wedding-invitation/static/js/2.ca20f32f.chunk.js.LICENSE.txt",
     "static/media/Landing.css": "/wedding-invitation/static/media/BinggraeⅡ.87f913d9.ttf",
     "static/media/galary001.b1a4fd09.jpeg": "/wedding-invitation/static/media/galary001.b1a4fd09.jpeg",
     "static/media/galary002.c301c953.jpeg": "/wedding-invitation/static/media/galary002.c301c953.jpeg",
@@ -32,8 +34,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.715f314b.js",
-    "static/js/2.f2bc6762.chunk.js",
-    "static/css/main.67dd0db6.chunk.css",
-    "static/js/main.fb71bff8.chunk.js"
+    "static/css/2.2c9f9580.chunk.css",
+    "static/js/2.ca20f32f.chunk.js",
+    "static/css/main.698c4fe8.chunk.css",
+    "static/js/main.bcdade20.chunk.js"
   ]
 }
