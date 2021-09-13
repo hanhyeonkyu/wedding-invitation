@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/wedding-invitation/static/css/main.698c4fe8.chunk.css",
-    "main.js": "/wedding-invitation/static/js/main.bcdade20.chunk.js",
-    "main.js.map": "/wedding-invitation/static/js/main.bcdade20.chunk.js.map",
-    "runtime-main.js": "/wedding-invitation/static/js/runtime-main.715f314b.js",
-    "runtime-main.js.map": "/wedding-invitation/static/js/runtime-main.715f314b.js.map",
-    "static/css/2.2c9f9580.chunk.css": "/wedding-invitation/static/css/2.2c9f9580.chunk.css",
-    "static/js/2.ca20f32f.chunk.js": "/wedding-invitation/static/js/2.ca20f32f.chunk.js",
-    "static/js/2.ca20f32f.chunk.js.map": "/wedding-invitation/static/js/2.ca20f32f.chunk.js.map",
+    "main.css": "/wedding-invitation/static/css/main.22d4b23c.chunk.css",
+    "main.js": "/wedding-invitation/static/js/main.ad04c88d.chunk.js",
+    "main.js.map": "/wedding-invitation/static/js/main.ad04c88d.chunk.js.map",
+    "runtime-main.js": "/wedding-invitation/static/js/runtime-main.78b22ad9.js",
+    "runtime-main.js.map": "/wedding-invitation/static/js/runtime-main.78b22ad9.js.map",
+    "static/css/2.7f8295b6.chunk.css": "/wedding-invitation/static/css/2.7f8295b6.chunk.css",
+    "static/js/2.949898a1.chunk.js": "/wedding-invitation/static/js/2.949898a1.chunk.js",
+    "static/js/2.949898a1.chunk.js.map": "/wedding-invitation/static/js/2.949898a1.chunk.js.map",
     "index.html": "/wedding-invitation/index.html",
-    "static/css/2.2c9f9580.chunk.css.map": "/wedding-invitation/static/css/2.2c9f9580.chunk.css.map",
-    "static/css/main.698c4fe8.chunk.css.map": "/wedding-invitation/static/css/main.698c4fe8.chunk.css.map",
-    "static/js/2.ca20f32f.chunk.js.LICENSE.txt": "/wedding-invitation/static/js/2.ca20f32f.chunk.js.LICENSE.txt",
+    "static/css/2.7f8295b6.chunk.css.map": "/wedding-invitation/static/css/2.7f8295b6.chunk.css.map",
+    "static/css/main.22d4b23c.chunk.css.map": "/wedding-invitation/static/css/main.22d4b23c.chunk.css.map",
+    "static/js/2.949898a1.chunk.js.LICENSE.txt": "/wedding-invitation/static/js/2.949898a1.chunk.js.LICENSE.txt",
     "static/media/Landing.css": "/wedding-invitation/static/media/BinggraeⅡ.87f913d9.ttf",
     "static/media/galary001.b1a4fd09.jpeg": "/wedding-invitation/static/media/galary001.b1a4fd09.jpeg",
     "static/media/galary002.c301c953.jpeg": "/wedding-invitation/static/media/galary002.c301c953.jpeg",
@@ -30,13 +30,14 @@
     "static/media/galary015.bf0be00d.jpeg": "/wedding-invitation/static/media/galary015.bf0be00d.jpeg",
     "static/media/galary016.5c0ebda3.jpeg": "/wedding-invitation/static/media/galary016.5c0ebda3.jpeg",
     "static/media/main.fefd6e2f.jpeg": "/wedding-invitation/static/media/main.fefd6e2f.jpeg",
-    "static/media/thekwedding.dca2d52c.png": "/wedding-invitation/static/media/thekwedding.dca2d52c.png"
+    "static/media/thekwedding.dca2d52c.png": "/wedding-invitation/static/media/thekwedding.dca2d52c.png",
+    "static/media/waltz.5f2d020c.ogg": "/wedding-invitation/static/media/waltz.5f2d020c.ogg"
   },
   "entrypoints": [
-    "static/js/runtime-main.715f314b.js",
-    "static/css/2.2c9f9580.chunk.css",
-    "static/js/2.ca20f32f.chunk.js",
-    "static/css/main.698c4fe8.chunk.css",
-    "static/js/main.bcdade20.chunk.js"
+    "static/js/runtime-main.78b22ad9.js",
+    "static/css/2.7f8295b6.chunk.css",
+    "static/js/2.949898a1.chunk.js",
+    "static/css/main.22d4b23c.chunk.css",
+    "static/js/main.ad04c88d.chunk.js"
   ]
 }
