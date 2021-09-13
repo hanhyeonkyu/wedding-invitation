@@ -27,7 +27,6 @@ import galary016 from "../imgs/galary016.jpeg"
 import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-
 const useStyles = makeStyles((theme) => ({
     gallarygrid: {
         display: 'flex',
@@ -80,7 +79,6 @@ const Landing = () => {
     const handleCopy = () => {
         setSopen(true)
     }
-
     return (
         <div className="wrapper">
             <section className="visual-section" style={{ marginBottom: "10rem" }}>
@@ -212,6 +210,8 @@ const Landing = () => {
                         <div>
                             <h4>신부(김인혜)에게 마음 보내기</h4>
                             <CopyToClipboard text="신한 110-424-549126" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 'bold', textDecorationLine: "underline" }}>카카오뱅크 3333-15-8460877</span><span> ⬅️ 복사하기</span></span></CopyToClipboard>
+                            <h4>혼주(김동연)에게 마음 보내기</h4>
+                            <CopyToClipboard text="농협 235095-52-118716" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 'bold', textDecorationLine: "underline" }}>농협 235095-52-118716</span><span> ⬅️ 복사하기</span></span></CopyToClipboard>
                             <h4>혼주(김순비)에게 마음 보내기</h4>
                             <CopyToClipboard text="농협 235100-56-030476" onCopy={handleCopy}><span><span style={{ color: "#0044bf", textAlign: 'left', fontWeight: 'bold', textDecorationLine: "underline" }}>농협 235100-56-030476</span><span> ⬅️ 복사하기</span></span></CopyToClipboard>
                         </div>
