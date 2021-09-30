@@ -11,7 +11,12 @@ const App = () => {
         loop
         controls
         src={waltz}
-        style={{ width: "100%", height: "20px" }}
+        style={{
+          width: "100%",
+          height: "20px",
+          opacity: "0.1",
+          position: "absolute",
+        }}
       />
       <Router>
         <Switch>
