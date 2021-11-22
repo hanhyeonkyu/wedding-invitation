@@ -1,4 +1,4 @@
-import { Button, IconButton, Modal, Snackbar } from "@material-ui/core";
+import { IconButton } from "@material-ui/core";
 import { EmailRounded, PhoneRounded } from "@material-ui/icons";
 import CountDown from "../comps/CountDown";
 import { makeStyles } from "@material-ui/core/styles";
@@ -76,23 +76,6 @@ const carouselData = [
 
 const Landing = () => {
   const classes = useStyles();
-  const handleClose = (target) => {
-    if (target === "modal") {
-      setOpen(false);
-    } else if (target === "snack") {
-      setSopen(false);
-    }
-  };
-  const [open, setOpen] = React.useState(false);
-  const [sopen, setSopen] = React.useState(false);
-  const [isBride, setIsBride] = React.useState(true);
-  const handleOpen = (isBride) => {
-    setIsBride(isBride);
-    setOpen(true);
-  };
-  const handleCopy = () => {
-    setSopen(true);
-  };
   return (
     <div className="wrapper">
       <section className="visual-section" style={{ marginBottom: "10rem" }}>
@@ -229,10 +212,7 @@ const Landing = () => {
               }}
             >
               <div style={{ height: "100%" }}>
-                <CopyToClipboard
-                  text="더케이웨딩컨벤션수원"
-                  onCopy={handleCopy}
-                >
+                <CopyToClipboard text="더케이웨딩컨벤션수원">
                   <a
                     href="https://map.kakao.com/link/search/더케이웨딩컨벤션수원"
                     target="_blank"
@@ -253,143 +233,6 @@ const Landing = () => {
         </div>
       </section>
       <div className="section-divider" />
-      <section className="money-section">
-        <div style={{ marginBottom: "1rem" }}>
-          신랑측에게 마음 보내기{" "}
-          <Button
-            onClick={(e) => handleOpen(false)}
-            style={{
-              borderRadius: "1rem",
-              marginLeft: "1rem",
-              fontFamily: "BinggraeMelona",
-              fontWeight: "bold",
-            }}
-            size="large"
-            variant="contained"
-            color="primary"
-          >
-            계좌번호 보기
-          </Button>
-        </div>
-        <div style={{ marginBottom: "1rem" }}>
-          신부측에게 마음 보내기{" "}
-          <Button
-            onClick={(e) => handleOpen(true)}
-            style={{
-              borderRadius: "1rem",
-              marginLeft: "1rem",
-              fontFamily: "BinggraeMelona",
-              fontWeight: "bold",
-            }}
-            size="large"
-            variant="contained"
-            color="secondary"
-          >
-            계좌번호 보기
-          </Button>
-        </div>
-      </section>
-      <Modal open={open} onClose={(e) => handleClose("modal")}>
-        <div
-          style={{
-            top: `30%`,
-            left: `30%`,
-            transform: `translate(-30%, -30%)`,
-            textAlign: "left",
-            backgroundColor: "rgb(255 239 203)",
-            border: "5px double rgb(148 133 22 / 63%)",
-            borderRadius: "14px 14px 14px 14px",
-            fontFamily: "BinggraeMelona",
-          }}
-          className={classes.paper}
-        >
-          {isBride ? (
-            <div>
-              <h4>신부(김인혜)에게 마음 보내기</h4>
-              <CopyToClipboard text="신한 110-424-549126" onCopy={handleCopy}>
-                <span>
-                  <span
-                    style={{
-                      color: "#0044bf",
-                      textAlign: "left",
-                      fontWeight: "bold",
-                      textDecorationLine: "underline",
-                    }}
-                  >
-                    카카오뱅크 3333-15-8460877
-                  </span>
-                  <span> ⬅️ 복사하기</span>
-                </span>
-              </CopyToClipboard>
-              <h4>혼주(김동연)에게 마음 보내기</h4>
-              <CopyToClipboard text="농협 235095-52-118716" onCopy={handleCopy}>
-                <span>
-                  <span
-                    style={{
-                      color: "#0044bf",
-                      textAlign: "left",
-                      fontWeight: "bold",
-                      textDecorationLine: "underline",
-                    }}
-                  >
-                    농협 235095-52-118716
-                  </span>
-                  <span> ⬅️ 복사하기</span>
-                </span>
-              </CopyToClipboard>
-            </div>
-          ) : (
-            <div>
-              <h4>신랑(한현규)에게 마음 보내기</h4>
-              <CopyToClipboard
-                text="카카오뱅크 3333-05-7361141"
-                onCopy={handleCopy}
-              >
-                <span>
-                  <span
-                    style={{
-                      color: "#0044bf",
-                      textAlign: "left",
-                      fontWeight: "bold",
-                      textDecorationLine: "underline",
-                    }}
-                  >
-                    카카오뱅크 3333-15-8460877
-                  </span>
-                  <span> ⬅️ 복사하기</span>
-                </span>
-              </CopyToClipboard>
-              <h4>혼주(장인숙)에게 마음 보내기</h4>
-              <CopyToClipboard
-                text="국민은행 603701-04-131030"
-                onCopy={handleCopy}
-              >
-                <span>
-                  <span
-                    style={{
-                      color: "#0044bf",
-                      textAlign: "left",
-                      fontWeight: "bold",
-                      textDecorationLine: "underline",
-                    }}
-                  >
-                    국민은행 603701-04-131030
-                  </span>
-                  <span> ⬅️ 복사하기</span>
-                </span>
-              </CopyToClipboard>
-            </div>
-          )}
-        </div>
-      </Modal>
-      <Snackbar
-        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-        open={sopen}
-        onClose={(e) => handleClose("snack")}
-        autoHideDuration={1500}
-        message={"복사됐어요!"}
-        key={sopen}
-      />
     </div>
   );
 };
