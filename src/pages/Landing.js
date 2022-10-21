@@ -1,6 +1,5 @@
 import { IconButton } from "@material-ui/core";
 import { EmailRounded, PhoneRounded } from "@material-ui/icons";
-import CountDown from "../comps/CountDown";
 import { makeStyles } from "@material-ui/core/styles";
 import Carousel from "react-gallery-carousel";
 import "react-gallery-carousel/dist/index.css";
@@ -26,6 +25,7 @@ import galary016 from "../imgs/galary016.jpeg";
 
 import React from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import CountDown2 from "../comps/CountDown2";
 
 const useStyles = makeStyles((theme) => ({
   gallarygrid: {
@@ -163,7 +163,7 @@ const Landing = () => {
       </section>
       <div className="section-divider" />
       <section className="timer-section">
-        <CountDown date="2021-10-24 12:10" />
+        <CountDown2 />
       </section>
       <div className="section-divider" />
       <section className="gallery-section">
