@@ -1,6 +1,5 @@
-import { IconButton } from "@material-ui/core";
-import { EmailRounded, PhoneRounded } from "@material-ui/icons";
-import { makeStyles } from "@material-ui/core/styles";
+import { Box, IconButton } from "@mui/material";
+import { EmailRounded, PhoneRounded } from "@mui/icons-material";
 import Carousel from "react-gallery-carousel";
 import "react-gallery-carousel/dist/index.css";
 import "./Landing.css";
@@ -27,34 +26,6 @@ import React from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import CountDown2 from "../comps/CountDown2";
 
-const useStyles = makeStyles((theme) => ({
-  gallarygrid: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    overflow: "hidden",
-    backgroundColor: theme.palette.background.paper,
-  },
-  gridList: {
-    width: "95vw",
-  },
-  paper: {
-    position: "absolute",
-    width: "80vw",
-    backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
-    boxShadow: theme.shadows[5],
-    padding: "1rem 2rem 2rem 2rem",
-  },
-  gpaper: {
-    position: "absolute",
-    width: "90vw",
-    backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
-    boxShadow: theme.shadows[5],
-  },
-}));
-
 const carouselData = [
   { src: galary001 },
   { src: galary002 },
@@ -75,7 +46,6 @@ const carouselData = [
 ];
 
 const Landing = () => {
-  const classes = useStyles();
   return (
     <div className="wrapper">
       <section className="visual-section" style={{ marginBottom: "10rem" }}>
@@ -168,9 +138,17 @@ const Landing = () => {
       <div className="section-divider" />
       <section className="gallery-section">
         <div className="gallery-tit">" Gallery "</div>
-        <div className={classes.gallarygrid}>
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-around",
+            overflow: "hidden",
+            backgroundColor: "#ffffff",
+          }}
+        >
           <Carousel images={carouselData} style={{ height: 500, width: 800 }} />
-        </div>
+        </Box>
         <div className="gallery-txt">
           저희 두 사람의
           <br />

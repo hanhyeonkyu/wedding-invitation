@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
 import ReactAudioPlayer from "react-audio-player";
 import waltz from "./sounds/waltz.ogg";
@@ -18,13 +18,11 @@ const App = () => {
           position: "absolute",
         }}
       />
-      <Router>
-        <Switch>
-          <Route exact path="/wedding-invitation">
-            <Landing />
-          </Route>
-        </Switch>
-      </Router>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/wedding-invitation" element={<Landing />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
